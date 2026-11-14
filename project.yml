@@ -1,0 +1,38 @@
+name: Camera
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  Camera:
+    type: application
+    platform: iOS
+    sources:
+      - path: Camera
+    info:
+      path: Camera/Info.plist
+      properties:
+        CFBundleDisplayName: Camera
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: Camera is used to take photos and record videos.
+        NSMicrophoneUsageDescription: The microphone records sound for videos and Live Photos.
+        NSPhotoLibraryAddUsageDescription: Saves your photos and videos to the Photo Library.
+        NSPhotoLibraryUsageDescription: Saves your photos and videos to the Photo Library.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.camera
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
